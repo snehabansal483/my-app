@@ -8,7 +8,7 @@ const Login = () => {
   const router = useRouter(); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,11 +47,6 @@ const Login = () => {
         <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-6 animate-pulse">
           Login
         </h1>
-
-        {/* Error Message */}
-        {error && (
-          <p className="text-red-500 text-center mb-4">{error}</p>
-        )}
 
         {/* Login Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
