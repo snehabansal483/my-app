@@ -97,7 +97,7 @@ const Login = () => {
 
         {/* Signup Redirect */}
         <p className="mt-6 text-center text-gray-500">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <a
             href="/signup"
             className="text-blue-600 hover:text-blue-400 transition-colors duration-300"

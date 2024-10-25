@@ -1,32 +1,27 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';  // Fix: Use named import for next/image
-// import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Typed from 'typed.js';
-import Blog from './blog/page';
-
-
 
 export default function Home() {
-  const el = useRef(null); // Create a ref to hold the DOM element
+  const el = useRef(null); 
 
   useEffect(() => {
-    if (el.current) { // Check if el.current is not null
+    if (el.current) { 
       const typed = new Typed(el.current, {
         strings: ['Coding', 'Web Development', 'Software Engineer'],
         typeSpeed: 50,
       });
 
       return () => {
-        typed.destroy(); // Cleanup typed.js instance on component unmount
+        typed.destroy();
       };
     }
-  }, []); // Empty dependency array to run only once on mount
+  }, []);
   return (
     <>
-      {/* Include Navbar component<Navbar />  */}
       <main>
       <section className="container px-8 py-10 mx-auto lg:h-128 lg:space-x-12 lg:flex lg:items-center">
   {/* Text Section */}

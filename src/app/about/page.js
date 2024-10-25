@@ -1,25 +1,26 @@
 // components/About.js
 import React from 'react';
+import Image from 'next/image';
 
 
 const projects = [
   {
     title: "Fitness Tracker Chatbot",
     description: "A virtual assistant designed to help users monitor and improve their fitness routines.",
-    image: "/img/fitnesstracker.png", // Replace with your actual image path
-    link: "https://fitness-alpha-roan.vercel.app/", // Replace with your project link
+    image: "/img/fitnesstracker.png", 
+    link: "https://fitness-alpha-roan.vercel.app/", 
   },
   {
     title: "Sorting Visualization",
     description: "An interactive visualization tool for understanding sorting algorithms.",
-    image: "/img/sorting-visualisation.png", // Replace with your actual image path
-    link: "https://dsatutorial.vercel.app/sorting_main.html", // Replace with your project link
+    image: "/img/sorting-visualisation.png", 
+    link: "https://dsatutorial.vercel.app/sorting_main.html", 
   },
   {
     title: "Mascot Landing Page",
     description: "A fully responsive landing page showcasing a brand mascot.",
-    image: "/img/mascot-landing.png", // Replace with your actual image path
-    link: "https://task-5-final.vercel.app/", // Replace with your project link
+    image: "/img/mascot-landing.png", 
+    link: "https://task-5-final.vercel.app/", 
   },
 ];
 
@@ -35,8 +36,8 @@ const About = () => {
 
       <div className="flex flex-col md:flex-row items-center md:space-x-6 mb-8">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
-          <img
-            src="/img/about.jpg" // Replace with an actual image path
+          <Image
+            src="/img/about.jpg" 
             alt="About"
             className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
           />
@@ -53,7 +54,7 @@ const About = () => {
             Whether you are a beginner or an experienced developer, we have something for everyone!
           </p>
           <p className="mb-4">
-            Join us on this journey, and let's explore the world of web development together!
+            Join us on this journey, and let&apos;s explore the world of web development together!
           </p>
         </div>
       </div>
@@ -61,12 +62,12 @@ const About = () => {
       {/* Project Showcase Section */}
       <h2 className="text-4xl font-bold text-center mb-6 text-blue-700 animate-pulse">Project Showcase</h2>
       <p className="text-center">
-        Check out some of the amazing projects we've worked on!
+        Check out some of the amazing projects we&apos;ve worked on!
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div key={project.title} className="border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover"
